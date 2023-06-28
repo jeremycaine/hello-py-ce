@@ -16,12 +16,4 @@ ibmcloud ce project select --name caine-code-engine
 
 ibmcloud ce app create --name hello-py-ce --src https://github.com/jeremycaine/hello-py-ce --str buildpacks
 ```
-and trigger rebuild
-```
-ibmcloud ce app update --name hello-py-ce
-```
 
-## Environment
-```
-. .venv/bin/activate
-```
