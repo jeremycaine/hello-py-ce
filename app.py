@@ -1,7 +1,7 @@
-from flask import Flask
+import flask
 import os
  
-app = Flask(__name__)
+app = flask.Flask(__name__)
 
 myvar = os.getenv('MYVAR', '<not set>')
 print (myvar)
@@ -9,7 +9,8 @@ print (myvar)
 # set up root route
 @app.route("/")
 def hello_world():
-    return "Hello World"
+    message = "Hello world and the message is " + myvar
+    return message
  
 # Get the PORT from environment
 port = os.getenv('PORT', '8080')
