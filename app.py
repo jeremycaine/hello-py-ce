@@ -2,6 +2,9 @@ from flask import Flask
 import os
  
 app = Flask(__name__)
+
+myvar = os.getenv('MYVAR', '<not set>')
+print (myvar)
  
 # set up root route
 @app.route("/")
