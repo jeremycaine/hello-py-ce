@@ -4,7 +4,7 @@ import os
 app = Flask(__name__)
 
 global myvar
-myvar = os.getenv('MYVAR', '<not set>')
+myvar = os.getenv('MYVAR', '{myvar not set}')
 
 def log(e):
     print("{0}\n".format(e))
