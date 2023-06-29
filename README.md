@@ -17,13 +17,12 @@ Project setup
 ```
 ibmcloud login --sso ...
 
-ibmcloud target -r us-east
+ibmcloud target -r eu-gb
 ibmcloud target -g ceh-group
 
 ibmcloud ce project list
-ibmcloud ce project select --name caine-ce
+ibmcloud ce project select --name ml-ce
 
-ibmcloud ce app create --name hello-py-ce --src https://github.com/jeremycaine/hello-py-ce --str buildpacks
+ibmcloud ce app create --name hello-py-ce --src https://github.com/jeremycaine/hello-py-ce --bcdr src --str buildpacks
+
 ```
-
-https://flask.palletsprojects.com/en/2.3.x/deploying/gunicorn/
